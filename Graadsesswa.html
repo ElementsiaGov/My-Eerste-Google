@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Eerste Google</title>
+</head>
+<body>
+    <style>
+    @import url("https://fonts.googleapis.com/css?family=Sen&display=swap");
+
+body {
+  background: #35c4fd;
+  font-family: "Sen";
+}
+.menu {
+  padding: 2px;
+  width: 100%;
+  max-width: 100%;
+  height: 60px;
+}
+.menu .container {
+  padding: 10px;
+}
+ul li {
+  max-width: 150px;
+  width: 100%;
+}
+ul {
+  display: flex;
+  justify-content: center;
+  column-gap: 5px;
+  list-style: none;
+  margin: auto;
+}
+ul li a {
+  text-decoration: none;
+  color: white;
+  background-color:  #4c84d8;
+  display: block;
+  padding: 10px;
+  text-align: center;
+}
+ul li:hover ul.dropdown {
+  display: block;
+  animation-name: mainnav;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1;
+  animation-delay: 0s;
+  animation-timing-function: linear;
+}
+ul li ul.dropdown {
+  display: none;
+  padding: 0;
+  overflow: hidden;
+}
+
+/* Mainnav animation */
+
+@keyframes mainnav {
+  0% {
+    height: 0px;
+    background-color:  #4c84d8;
+  }
+  100% {
+    height: 100px;
+    background-color: transparent;
+  }
+}
+
+ul li ul.dropdown li {
+  margin: 5px 0;
+}
+.menu ul li ul li:first-child {
+  animation-name: navanime;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1;
+  animation-delay: 0s;
+  animation-timing-function: linear;
+}
+.menu ul li ul li:nth-child(2) {
+  animation-name: navanime;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1;
+  animation-delay: 0.1s;
+  animation-timing-function: linear;
+}
+.menu ul li ul li:nth-child(3) {
+  animation-name: navanime;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1;
+  animation-delay: 0.2s;
+  animation-timing-function: linear;
+}
+.menu ul li ul li:nth-child(4) {
+  animation-name: navanime;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1;
+  animation-delay: 0.3s;
+  animation-timing-function: linear;
+}
+.menu ul li ul li:nth-child(5) {
+  animation-name: navanime;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1;
+  animation-delay: 0.4s;
+  animation-timing-function: linear;
+}
+.menu {
+  position: relative;
+  background: rgb(14, 25, 185);
+  background-blend-mode: overlay;
+  border-radius: 22px 0 22px 0;
+}
+.menu .container > ul:after {
+  height: 39px;
+  max-width: 10%;
+  width: 100%;
+  min-width: 0;
+  background: #35c4fd;
+  content: "";
+  position: relative;
+  display: block;
+  border-radius: 0 0 80% / 0 0 99% 0;
+}
+.menu .container > ul:before {
+  height: 39px;
+  max-width: 10%;
+  width: 100%;
+  min-width: 0;
+  background: #35c4fd;
+  content: "";
+  position: relative;
+  display: block;
+  border-radius: 80% 0 0 0/ 100% 0 0 0;
+}
+
+/* Navanim animation */
+
+@keyframes navanime {
+  0% {
+    transform: rotateY(180deg);
+  }
+}
+ul li a {
+  transition: all 0.2s linear;
+  position: relative;
+  z-index: 1;
+}
+ul li > a:after {
+  content: "";
+  background-color:  rgb(77, 221, 226);
+  display: block;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 0%;
+  height: 0%;
+  transition: all 0.3s linear;
+  z-index: -1;
+}
+ul li:hover > a:after {
+  color: #fffb00;
+  content: "";
+  background-color:  rgb(77, 221, 226);
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+body {
+  background-image: url('https://images.photowall.com/products/60676/world-map-blue.jpg?h=699&q=85');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+header {
+    background-color: rgb(14, 25, 185);
+  position: relative;
+  font-family: system-ui, Roboto, sans-serif;
+  min-height: 75px;
+  display: flex;
+  align-items: center;
+  position: sticky;
+  top: -54px;
+  z-index: 2;
+}
+
+.logo {
+  height: 24px;
+}
+
+a {
+  color:  #4c84d8;
+  text-decoration: none;
+  border: none;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 24px 24px 0px;
+  width: 100%;
+
+}
+
+.search-bar {
+  display: flex;
+  justify-content: center;
+  padding: 24px;
+  background-color: rgb(14, 25, 185);
+}
+
+.search-bar input {
+  width: 50%;
+  min-width: 300px;
+  padding: 12px 24px;
+  border-radius: 24px;
+  font-size: 16px;
+  border: 0px;
+  outline: none;
+}
+
+.search-bar [list]::-webkit-list-button,
+.search-bar [list]::-webkit-calendar-picker-indicator {
+  display: none !important;
+}
+
+.search-display {
+  text-align: center;
+}
+
+.card-header__title {
+  font-weight: 700;
+  font-size: 14px;
+  color: #8fa6b3;
+}
+
+.filter-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 10px;
+  padding: 32px 0;
+  border-top: 1px solid #e4e4e4;
+  border-bottom: 1px solid #e4e4e4;
+  margin-bottom: 32px;
+}
+
+.filter-button {
+  transition: background-color 200ms, color 200ms;
+  background-color: transparent;
+  font: inherit;
+  cursor: pointer;
+  display: inline-block;
+  padding: 0 8px;
+  color: #717171;
+  border: 1px solid #9b9b9b;
+  border-radius: 25px;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.filter-button:hover {
+  background-color: #f3f3f3;
+  color: #3a3a3a;
+}
+
+.filter-button.is-active {
+  background-color: #0085b6;
+  border-color: #0085b6;
+  color: #fff;
+}
+.News1 {
+    display: block;
+    border: double black 15px;
+    width: 1300px;
+    align-items: center;
+    background-color: #666;
+}
+</style>
+</body>
+<html>
+    <nav>
+        <div class="menu">
+          <div class="container">
+            <ul class="inner-menu">
+              <li><a href="swa.html">SWA</a>
+                <ul class="dropdown">
+                  <li><a href="Graadvyfswa.html">Graad 5</a></li>
+                  <li><a href="Graadsesswa.html">Graad 6</a></li>
+                </ul>
+              </li>
+              <li><a href="#">SWG</a>
+                <ul class="dropdown">
+                  <li><a href="#">Graad 5</a></li>
+                  <li><a href="#">Graad 6</a></li>
+                </ul>
+              </li>
+              <li><a href="#">NWT</a>
+                <ul class="dropdown">
+                  <li><a href="#">Graad 5</a></li>
+                  <li><a href="#">Graad 6</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Vraestelle</a>
+                <ul class="dropdown">
+                  <li><a href="#">SWG</a></li>
+                  <li><a href="#">SWA</a></li>
+                  <li><a href="#">NWT</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <header>
+        <div class="container header-content">
+      
+          <div class="search-bar">
+            <input id="search" type="search" placeholder="&#x1F50D; Start typing to search..." list="search-suggestions" autocomplete="off"/>
+            
+            <datalist id="search-suggestions">
+              <option value="Geskiedenis">
+              <option value="Titanic">
+              <option value="Lakmoespapier">
+              <option value="Kondensasie">
+            </datalist>
+          </div>
+        </div>
+      </header>
+      <main class="container">
+        <div class="profile__posts">
+          <div class="search-display"></div>
+          <div class="card-header">
+            <div class="card-header__title">Sponsored by Edit Buddy, the number one, trusted design and coding company</div>
+          </div>
+          <div class="posts-container">
+          </div>
+        </div>
+      </main>
+      <section class="News1">
+        <a href="https://www.canva.com/design/DAF1M8w8Slg/wldlxPiYoOAcEC-OUt5T0Q/edit">
+            <img src="https://media.discordapp.net/attachments/1101785167233826846/1178065516334694431/Hoekom_gebruik_ons_padvervoer.png?ex=6574ca02&is=65625502&hm=a35618ae34ac2c563c6e75e27b5c08a0238d9d47a096aa574eeaec8bff7f224c&=&format=webp&width=1025&height=197" alt="Example Image" style="width:1300px;height:250px;">
+          </a>
+          <p>Hoekom Gebruik ons Padvervoer? Artikel deur Juffrou Magda Laubscher</p>   
+      </section>
+      <script>
+      let postsData = "";
+        const postsContainer = document.querySelector(".posts-container");
+        const searchDisplay = document.querySelector(".search-display");
+        
+        const createPost = (postData) => {
+          const { title, link, image, categories } = postData;
+          const post = document.createElement("div");
+          post.className = "post";
+          post.innerHTML = `
+              <a class="post-preview" href="${link}" target="_blank">
+                <img class="post-image" src="${image}">
+              </a>
+              <div class="post-content">
+                <p class="post-title">${title}</p>
+                <div class="post-tags">
+                  ${categories
+                    .map((category) => {
+                      return '<span class="post-tag">' + category + "</span>";
+                    })
+                    .join("")}
+                </div>
+              </div>
+          `;
+        
+          postsContainer.append(post);
+        };
+        
+        const handleSearchPosts = (query) => {
+          const searchQuery = query.trim().toLowerCase();
+          
+          if (searchQuery.length <= 1) {
+            resetPosts()
+            return
+          }
+          
+          let searchResults = [...postsData].filter(
+            (post) =>
+              post.categories.some((category) => category.toLowerCase().includes(searchQuery)) ||
+              post.title.toLowerCase().includes(searchQuery)
+          );
+          
+          if (searchResults.length == 0) {
+            searchDisplay.innerHTML = "No results found"
+          } else if (searchResults.length == 1) {
+            searchDisplay.innerHTML = `1 result found for your query: ${query}`
+          } else {
+            searchDisplay.innerHTML = `${searchResults.length} results found for your query: ${query}`
+          }
+        
+          postsContainer.innerHTML = "";
+          searchResults.map((post) => createPost(post));
+        };
+        
+        const resetPosts = () => {
+          searchDisplay.innerHTML = ""
+          postsContainer.innerHTML = "";
+          postsData.map((post) => createPost(post));
+        };
+        
+        const search = document.getElementById("search");
+        
+        let debounceTimer;
+        const debounce = (callback, time) => {
+          window.clearTimeout(debounceTimer);
+          debounceTimer = window.setTimeout(callback, time);
+        };
+        
+        search.addEventListener(
+          "input",
+          (event) => {
+            const query = event.target.value;
+            debounce(() => handleSearchPosts(query), 500);
+          },
+          false
+        );</script>
+</html>
